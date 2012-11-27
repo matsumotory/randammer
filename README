@@ -1,9 +1,17 @@
 put irc message from tweet of randam user.
 
-users = [
+* timeliner.rb
+
+interest_users = [
   "twitter_user1",
   "twitter_user2",
   "twitter_user3",
 ]
 
-channel = '#channel'
+
+* searchtter.rb
+
+search_words = [
+  "mruby",
+  "mod_mruby",
+]
