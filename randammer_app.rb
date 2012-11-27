@@ -3,7 +3,6 @@
 
 require 'carrier-pigeon'
 require 'twitter'
-require 'pp'
 require 'kconv'
 
 Twitter.configure do |config|
