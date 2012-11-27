@@ -24,7 +24,7 @@ channel =   '#channel'
 
 CarrierPigeon.send(
   :uri      => "irc://" + user + "tter@" + server + '/' + channel,
-  :message  => "\x0312" + Twitter.user_timeline(user).first.text.tosjis,
+  :message  => "\x0312" + Twitter.user_timeline(user).first.text.tojis.force_encoding("US-ASCII"),
   :ssl      => false,
   :join     => false
 )
