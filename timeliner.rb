@@ -22,7 +22,7 @@ interest_users = [
 ]
 
 user    = interest_users[rand(interest_users.length)]
-message = Twitter.user_timeline(user).first.text.tojis.force_encoding("US-ASCII")
+message = Twitter.user_timeline(user).first.text.tojis.force_encoding("US-ASCII").sub("\n", "")
 color   = "\x0312"
 
 # color code of message

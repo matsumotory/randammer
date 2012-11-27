@@ -23,7 +23,7 @@ search_words = [
 word    = search_words[rand(search_words.length)]
 
 r       = Twitter.search(word).results.first
-message = r.text.tojis.force_encoding("US-ASCII")
+message = r.text.tojis.force_encoding("US-ASCII").sub("\n", "")
 user    = r.user.screen_name  + "tter"
 
 color   = "\x0312"
