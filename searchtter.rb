@@ -15,12 +15,12 @@ end
 server  = 'irc.media.kyoto-u.ac.jp:6667'
 channel = '#channel'
 
-words = [
+search_words = [
   "mruby",
   "mod_mruby",
 ]
 
-word    = words[rand(words.length)]
+word    = search_words[rand(search_words.length)]
 
 r       = Twitter.search(word).results.first
 message = r.text.tosjis

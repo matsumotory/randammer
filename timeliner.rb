@@ -12,15 +12,15 @@ Twitter.configure do |config|
   config.oauth_token_secret = ''
 end 
 
-users = [
+interest_users = [
   "twitter_user1",
   "twitter_user2",
   "twitter_user3",
 ]
 
+user    =   interest_users[rand(interest_users.length)]
 server  =   'irc.media.kyoto-u.ac.jp:6667'
 channel =   '#channel'
-user    =   users[rand(users.length)]
 
 CarrierPigeon.send(
   :uri      => "irc://" + user + "tter@" + server + '/' + channel,
