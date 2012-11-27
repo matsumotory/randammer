@@ -26,6 +26,8 @@ r       = Twitter.search(word).results.first
 message = r.text.tojis.force_encoding("US-ASCII")
 user    = r.user.screen_name  + "tter"
 
+color   = "\x0312"
+
 # color code of message
 # \x03 + color number
 #
@@ -48,7 +50,7 @@ user    = r.user.screen_name  + "tter"
 
 CarrierPigeon.send(
   :uri      => "irc://" + user + "@" + server + "/" + channel,
-  :message  => "\x0312" + message,
+  :message  => color + message,
   :ssl      => false,
   :join     => false
 )

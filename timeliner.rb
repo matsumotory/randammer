@@ -23,6 +23,7 @@ interest_users = [
 
 user    = interest_users[rand(interest_users.length)]
 message = Twitter.user_timeline(user).first.text.tojis.force_encoding("US-ASCII")
+color   = "\x0312"
 
 # color code of message
 # \x03 + color number
@@ -46,7 +47,7 @@ message = Twitter.user_timeline(user).first.text.tojis.force_encoding("US-ASCII"
 
 CarrierPigeon.send(
   :uri      => "irc://" + user + "tter@" + server + '/' + channel,
-  :message  => "\x0312" + message,
+  :message  => color + message,
   :ssl      => false,
   :join     => false
 )
