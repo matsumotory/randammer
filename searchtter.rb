@@ -27,7 +27,7 @@ message = r.text.tosjis
 user    = r.user.screen_name  + "tter"
 
 CarrierPigeon.send(
-  :uri      => "irc://" + user + "@" server + "/" + channel,
+  :uri      => "irc://" + user + "@" + server + "/" + channel,
   :message  => "\x0312" + message,
   :ssl      => false,
   :join     => false
