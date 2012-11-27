@@ -18,11 +18,12 @@ users = [
   "twitter_user3",
 ]
 
-user    =   users[rand(users.length)]
+server  =   'irc.media.kyoto-u.ac.jp:6667'
 channel =   '#channel'
+user    =   users[rand(users.length)]
 
 CarrierPigeon.send(
-  :uri      => "irc://" + user + "tter@irc.media.kyoto-u.ac.jp:6667/" + channel,
+  :uri      => "irc://" + user + "tter@" + server + '/' + channel,
   :message  => user + "の最新ツイート: ".tosjis + Twitter.user_timeline(user).first.text.tosjis,
   :ssl      => false,
   :join     => false
